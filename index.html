@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Tasty Daily</title>
+	<link rel="icon" href="icon_path" type="image/icon type">
+	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	 <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+  <header>
+  <div class="container-fluid d-flex justify-content-between flex-wrap align-items-center p-2"id="header">
+  <div class="hel">Delivery on next-day from 10:00 AM to 8:00 PM</div>
+  <div class="d-flex justify-content-between d-lg-block d-none">
+  <ul class="nav flex-sm-column flex-md-row align-items-center ">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Shop</a></li>   
+    <li><a href="#">Vendors</a></li>   
+    <li><a href="#">Blog</a></li>
+<div class="dropdown">
+    <button type="button" class="btn dropdown-toggle drodown" data-bs-toggle="dropdown" style="color: white; border: none;">
+      Pages
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="index.html">Home</a></li>
+      <li><a class="dropdown-item" href="about.html">About</a></li>
+      <li><a class="dropdown-item" href="contact.html">Contacts</a></li>
+      <li><a class="dropdown-item" href="#">Faqs</a></li>
+      <li><a class="dropdown-item" href="#">Maintanaince Mode</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">404 Error</a></li>
+    </ul>
+  </div>
+  </ul>
+  </div>
+  <div class="d-lg-block d-none pho"><i class="fa-solid fa-phone" style="color: #00d783;"></i><a href="#">+1 900 776691</a></div>
+  <div>
+ <div class="d-flex jeo">
+  <div><i class="fa-brands fa-facebook"></i></div>
+  <div><i class="fa-brands fa-instagram"></i></div>
+  <div><i class="fa-brands fa-whatsapp"></i></div>
+  <div><i class="fa-brands fa-youtube"></i></div>
+ </div>
+ </div>
+ </div>
+  <div class="container-fluid d-flex justify-content-between flex-wrap p-4 nav2"id="header-2">
+  <div><button type="button" onclick="english" class="button d-lg-block d-none">English</button></div>
+  <div class="d-flex justify-content-between d-lg-block d-none">
+  <ul class="d-flex flex-sm-column flex-md-row align-items-center nav2 ">
+    <li><i class="fa-solid fa-shop il"></i><a href="#" class="ul2li">Shop</a></li>
+    <li><i class="fa-solid fa-carrot il"></i><a href="#" class="ul2li">Vegetables</a></li>   
+    <li><i class="fa-solid fa-apple-whole il"></i><a href="#" class="ul2li">Fresh Fruits</a></li>   
+    <li><i class="fa-solid fa-bacon il"></i><a href="#" class="ul2li">Meat</a></li>
+  </ul>
+  </div>
+  <div><img src="./logo.png" width="200px" height="auto"></div>
+  <div class="d-flex justify-content-between d-lg-block d-none">
+  <ul class="d-flex flex-sm-column flex-md-row align-items-center nav2 ">
+    <li><i class="fa-solid fa-shrimp il"></i><a href="#" class="ul2li">Seafood</a></li>
+    <li><i class="fa-solid fa-cookie-bite il"></i><a href="#" class="ul2li">Baking</a></li>   
+    <li><i class="fa-solid fa-champagne-glasses il"></i><a href="#" class="ul2li">Drinks</a></li>   
+    <li><i class="fa-regular fa-window-maximize il"></i><a href="#" class="ul2li">Others</a></li>
+  </ul>
+  </div>
+ <div class="d-flex jeo">
+  <div><i class="fa-solid m-1 fa-magnifying-glass cartpre"></i></div>
+  <div><i class="fa-solid m-1 fa-user cartpre"></i></div>
+  <div><i class="fa-solid m-1 fa-heart cartpre"></i></div>
+  <div id="cart-button">
+    <i class="fa-solid m-1 fa-cart-shopping cartpre" onclick="cartShopping()"></i>
+    <div id="cart-quantity" class="quantity">0</div>
+    <div class="cart-shopping" id="cart">
+      <div class="cart-item d-flex">
+        <div><strong>Name</strong></div>
+        <div><strong>Prices</strong></div>
+      </div>
+      <hr>
+      <div class="cart_items" id="cart_items">
+      </div><hr>
+      <div class="d-flex cart-item">
+        <div><strong>Total</strong></div>
+        <div id="Total"><strong>$0.00</strong></div>
+        </div>
+        <div class="cartbutn">
+          <button class="butndsg" onclick="submitOrder()" id="Submit">Submit Order</button>
+        </div>
+    </div>
+  </div>
+  
+</div>
+  </div>
+  </header>
+  <div class="clr">
+  <section id="imgfont">
+  <div class="banner">
+   <div><img src="part.webp" width="50%" height="auto" class="textbanner"></div>
+  <img src="tastydaily.jpg" width="100%" height="350px">
+  <div class="textbanner">
+  <h1>Order Tasty Fruits<br>
+and Get Free Delivery!</h1>
+<div class="bupa"><button type="button" onclick="Explore-Shop" class="button2"><i class="fa-solid fa-cart-shopping il"></i>Explore-Shop</button>
+<div class="pb"><p>2500+ Fresh Products</p></div>
+</div>
+  </div>
+  </div>
+  <div class="container">
+  <div class="row mt-4">
+  <div class="col-md-4">
+  <div>
+  <div class="bannermini">
+  <img src="1t.png" width="100%" height="auto">
+  <div class="textbannermini">
+  <h2>Fresh Seafood
+<br>Everyday!</h2>
+<div class="bupa"><button type="button" onclick="Explore-Shop" class="button3">Shop Now</button>
+</div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+  <div>
+  <div class="bannermini">
+  <img src="2t.jpg" width="100%" height="auto">
+  <div class="textbannermini">
+  <h2>Sweet Organic
+<br>Drinks!</h2>
+<div class="bupa"><button type="button" onclick="Explore-Shop" class="button3">Shop Now</button>
+</div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+  <div>
+  <div class="bannermini">
+  <img src="3t.jpg" width="100%" height="auto">
+  <div class="textbannermini">
+  <h2>For Stake
+<br>Lovers!</h2>
+<div class="bupa"><button type="button" onclick="Explore-Shop" class="button3">Shop Now</button>
+</div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>
+  <div class="container">
+  <div class="row text-center pt-4">
+  <div class="col-md-12">
+  <div>
+  <h2>Best Sellers In November</h2>
+  </div>
+  </div>
+  <section>
+  <div class="container">
+  <div>
+  <div class="row">
+
+  <div class="col-md-3">
+  <div class="card" style="width: 100%; height: 100%;">
+  <div class="card-body">
+    <img src="1b.jpg" width="100%" height="auto">
+    <h5 class="card-title"><a href="#" class="ul2li2">Mint</a></h5>
+    <p class="card-text">The mint plant is a herbaceous perennial that is widely known.To be known as mint.
+	<h5 class="card-title"><a href="#" class="ul2li2">Leafy Green</a></h5>
+    <a href="#" class="btn"  style="background-color:#EDF5EC;">Choose An Option</a>
+	<div>
+	<h5 class="il mt-4">$13.00 – $22.00</h5>
+	<button type="button" onclick="products('mint',13)" class="bbb"><i class="fa-solid fa-cart-shopping"></i></button>
+	</div>
+  </div>
+</div>
+  </div>
+
+  <div class="col-md-3">
+  <div class="card" style="width: 100%; height:100%;">
+  <div class="card-body">
+    <img src="2b.jpg" width="100%" height="auto">
+    <h5 class="card-title"><a href="#" class="ul2li2">Spring Onions 1 Bundle</a></h5>
+    <p class="card-text">Go for spring onions with firm, unblemished bulbs and bright green, perky leaves.</p>
+	<h5 class="card-title"><a href="#" class="ul2li2">Leafy Green</a></h5>
+	<div>
+	<h5 class="il mt-5"> $10.00</h5>
+	<button type="button" onclick="products('Spring Onions 1 Bundle',10)" class="bbb"><i class="fa-solid fa-cart-shopping"></i></button>
+	</div>
+  </div>
+</div>
+  </div>
+  <div class="col-md-3">
+  <div class="card" style="width: 100%; height: 100%;">
+  <div class="card-body">
+    <img src="3b.jpg" width="100%" height="auto">
+    <h5 class="card-title"><a href="#" class="ul2li2">Avacados 2 Units</a></h5>
+    <p class="card-text">Avocados are a rich source of vitamins C, E, K, and B-6.</p>
+<div>
+<i class="fa-regular fa-star" style="color: #00d783;"></i>
+<i class="fa-regular fa-star" style="color: #00d783;"></i>
+<i class="fa-regular fa-star" style="color: #00d783;"></i>
+<i class="fa-regular fa-star" style="color: #00d783;"></i>
+<i class="fa-regular fa-star" style="color: #00d783;"></i>
+</div>
+<h5 class="card-title"><a href="#" class="ul2li2">Topical,Erotic</a></h5>
+<div>
+<h5 class="il mt-5"> $60.00</h5>
+<button type="button" onclick="products('Avacados 2 Units',60)" class="bbb"><i class="fa-solid fa-cart-shopping"></i></button>
+</div>
+  </div>
+</div>
+  </div>
+  <div class="col-md-3">
+  <div class="card" style="width: 100%; height: 100%;">
+  <div class="card-body">
+    <img src="4b.jpg" width="100%" height="auto">
+    <h5 class="card-title"><a href="#" class="ul2li2">Basil</a></h5>
+    <p class="card-text">To keep basil fresh, trim the stems and place them in a glass or jar of water.</p>
+	<h5 class="card-title"><a href="#" class="ul2li2">Leafy Green</a></h5>
+	 <a href="#" class="btn"  style="background-color:#EDF5EC;">Choose An Option</a>
+	 <div>
+	 <h5 class="il mt-1"> $60.00</h5>
+	 <button type="button" onclick="products('Basil',60)" class="bbb"><i class="fa-solid fa-cart-shopping"></i></button>
+	 </div>
+  </div>
+</div>
+  </div>
+  </div>
+  </div>
+  <div>
+  <div class="row">
+  <div class="col-md-3">
+  <div class="card" style="width: 100%; height: 100%;">
+  <div class="card-body">
+    <img src="5b.jpg" width="100%" height="auto">
+    <h5 class="card-title"><a href="#" class="ul2li2">Tortilla (10 pcs per bag)</a></h5>
+    <p class="card-text">Tortillas are a unique, chemically leavened product.to teh many many features of the day.</p>
+	<h5 class="card-title"><a href="#" class="ul2li2">Tortillas</a></h5>  
+    <div>	
+	<h5 class="il mt-5">$8.00</h5>
+	<button type="button" onclick="products('Tortilla (10 pcs per bag)',8)" class="bbb"><i class="fa-solid fa-cart-shopping"></i></button>
+	</div>
+  </div>
+</div>
+  </div>
+  <div class="col-md-3">
+  <div class="card" style="width: 100%; height: 100%;">
+  <div class="card-body">
+    <img src="6b.jpg" width="100%" height="auto">
+    <h5 class="card-title"><a href="#" class="ul2li2">BenOrganic 100% Apple Juice</a></h5>
+    <p class="card-text">BenOrganic 100% Apple Juice is a premium quality beverage made from.</p>
+	<h5 class="card-title"><a href="#" class="ul2li2">Juice</a></h5>
+	<div>
+	<h5 class="il mt-5">$1</h5>
+  <button type="button" onclick="products('BenOrganic 100% Apple Juice',1)" class="bbb"><i class="fa-solid fa-cart-shopping"></i></button>
+	</div>
+  </div>
+</div>
+  </div>
+  <div class="col-md-3">
+  <div class="card" style="width: 100%; height: 100%;">
+  <div class="card-body">
+    <img src="7b.jpg" width="100%" height="auto">
+    <h5 class="card-title"><a href="#" class="ul2li2">Red Radish 1 pack</a></h5>
+    <p class="card-text">The color of a radish is a strong indicator of its taste.and it is good.</p>
+<div>
+<i class="fa-regular fa-star" style="color: #00d783;"></i>
+<i class="fa-regular fa-star" style="color: #00d783;"></i>
+<i class="fa-regular fa-star" style="color: #00d783;"></i>
+<i class="fa-regular fa-star" style="color: #00d783;"></i>
+<i class="fa-regular fa-star" style="color: #00d783;"></i>
+</div>
+<h5 class="card-title"><a href="#" class="ul2li2">Root</a></h5>
+<div>
+<h5 class="il mt-5"> $20.00</h5>
+<button type="button" onclick="products('Red Radish 1 pack',20)" class="bbb"><i class="fa-solid fa-cart-shopping"></i></button>
+</div>
+  </div>
+</div>
+  </div>
+  <div class="col-md-3">
+  <div class="card" style="width: 100%; height: 100%;">
+  <div class="card-body">
+    <img src="8b.jpg" width="100%" height="auto">
+    <h5 class="card-title"><a href="#" class="ul2li2">Natural Coconut Water</a></h5>
+    <p class="card-text">Never from Concentrate | 100% recyclable packaging | Low after the peerfect match of the pakaging.</p>
+	<h5 class="card-title"><a href="#" class="ul2li2">Water</a></h5>
+	<div>
+	 <h5 class="il mt-5"> $10.00</h5>
+	<button type="button" onclick="products('Natural Coconut Water',10)" class="bbb"><i class="fa-solid fa-cart-shopping"></i></button>
+	 </div>
+  </div>
+</div>
+  </div>
+  </div>
+  </div>
+  <div>
+  <div class="row">
+  <div class="col-md-3">
+  <div class="card" style="width: 100%; height: 100%;">
+  <div class="card-body">
+    <img src="9b.jpg" width="100%" height="auto">
+    <h5 class="card-title"><a href="#" class="ul2li2">Organic Free-Range Eggs</a></h5>
+    <p class="card-text">Fresh eggs from organic free range hens roaming outdoors to amny many chickens.Optionss..</p>
+	<h5 class="card-title"><a href="#" class="ul2li2">Chicken Eggs</a></h5>
+  <div>    
+	<h5 class="il mt-5"> $25.00</h5>
+	<button type="button" onclick="products('Organic Free-Range Eggs',25)" class="bbb"><i class="fa-solid fa-cart-shopping"></i></button>
+  </div>
+</div>
+  </div>
+  </div>
+  <div class="col-md-3">
+  <div class="card" style="width: 100%; height: 100%;">
+  <div class="card-body">
+    <img src="10b.jpg" width="100%" height="auto">
+    <h5 class="card-title"><a href="#" class="ul2li2">Freshly Whole British Goose </a></h5>
+    <p class="card-text">In addition to its delicious taste, British Goose with Giblets is also a healthy option..</p>
+	<h5 class="card-title"><a href="#" class="ul2li2">Chicken & Poultry</a></h5>
+  <div>    
+	<h5 class="il mt-5"> $160.00</h5>
+	<button type="button" onclick="products('Freshly Whole British Goose',160)" class="bbb"><i class="fa-solid fa-cart-shopping"></i></button>
+  </div>
+</div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>
+  </div>
+  </div>
+  <div class="container">
+  <div class="row">
+  <div class="hellocont">
+  <div class="bannerss immm">
+  <img src="tastydaily-2.webp" width="430px" height="auto">
+  <div class="textbannerss">
+  <h1>We Delivery on Next<br> Day from 10:00 AM to<br> 08:00 PM</h1>
+<div class="pb"><p>* For Orders starts from $100</p></div>
+<div class="bupa"><button type="button" onclick="Explore-Shop" class="button2">Read More</button>
+</div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="container">
+  <div class="row mt-4">
+  <div class="col-md-12">
+  <div class="d-flex align-items-center">
+  <h2>Big Sales Today</h2>
+  <div class="time">
+  <button type="button" class="timer il p-3 pt-1 pb-0">88<br><p style="color: black;">Days</p></button>
+  <button type="button"class="timer il p-3 pt-1 pb-0">25<br><p style="color: black;">Hour</p></button>
+  <button type="button"  class="timer il p-3 pt-1 pb-0">18<br><p style="color: black;">Mins</p></button>
+  <button type="button"  class="timer il p-3 pt-1 pb-0">20<br><p style="color: black;">Secs</p></button>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="row text-center d-flex">
+  <div class="col-md-8 d-flex biig">
+  <div class="card" style="width: 100%; height: 80%;">
+  <div class="card-body">
+    <img src="1b.jpg" width="100%" height="auto">
+    <h5 class="card-title"><a href="#" class="ul2li2">Mint</a></h5>
+	<h5 class="card-title"><a href="#" class="ul2li2">Leafy Green</a></h5>
+	<a href="#" class="btn"  style="background-color:#EDF5EC;">Option</a>
+	<div>
+	<h5 class="il mt-3">$13.00</h5>
+	
+	<button type="button" onclick="products('Mint',13)" class="bbb"><i class="fa-solid fa-cart-shopping"></i></button>
+	</div>
+  </div>
+</div>
+  <div class="card" style="width: 100%; height: 80%;">
+  <div class="card-body">
+    <img src="4b.jpg" width="100%" height="auto">
+    <h5 class="card-title"><a href="#" class="ul2li2">Basil</a></h5>
+	<h5 class="card-title"><a href="#" class="ul2li2">Leafy Green</a></h5>
+	 <a href="#" class="btn"  style="background-color:#EDF5EC;">Choose An Option</a>
+	 <div>
+	 <h5 class="il mt-1"> $60.00</h5>
+	 <button type="button" onclick="products('Basil',60)" class="bbb"><i class="fa-solid fa-cart-shopping"></i></button>
+	 </div>
+  </div>
+</div>
+  <div class="card" style="width: 100%; height:80%;">
+  <div class="card-body">
+    <img src="2b.jpg" width="100%" height="auto">
+    <h5 class="card-title"><a href="#" class="ul2li2">Spring Onions 1 Bundle</a></h5>
+	<div>
+	<h5 class="il mt-5"> $10.00</h5>
+	<button type="button" onclick="products('Spring Onions 1 Bundle',10)" class="bbb"><i class="fa-solid fa-cart-shopping"></i></button>
+	</div>
+  </div>
+</div>
+  </div>
+  <div class="col-md-4">
+  <img src="slider.jpg" width="400px" height="auto" style="margin-top: -90px;">
+   </div>
+  </div>
+  </div>
+  <div class="container">
+  <div class="row mt-4">
+  <div class="col-md-3">
+  <div class="bannerminipam">
+  <img src="eg.jpg" width="100%" height="300px">
+  <div class="textbannerpam">
+  <div class="fourmod"><button type="button" onclick="Explore-Shop" class="imgfour">-33%</button>
+  </div>
+  <h2>For ten<br>Chicken<br>Eggs</h2>
+</div>
+  </div>
+  </div>
+  <div class="col-md-3">
+  <div class="bannerminipam">
+  <img src="sea.jpg" width="100%" height="300px">
+  <div class="textbannerpam">
+  <div class="fourmod"><button type="button" onclick="Explore-Shop" class="imgfour">-25%</button>
+  </div>
+  <h2>Big<br>Discounts<br>for<br>Seafood</h2>
+</div>
+  </div>
+  </div>
+  <div class="col-md-3">
+   <div class="bannerminipam">
+  <img src="bakers.jpg" width="100%" height="300px">
+  <div class="textbannerpam">
+  <div class="fourmod"><button type="button" onclick="Explore-Shop" class="imgfour">-37%</button>
+  </div>
+  <h2>Exceellent<br>Breads<br>From our<br>bakers</h2>
+</div>
+  </div>
+  </div>
+  <div class="col-md-3">
+  <div class="bannerminipam">
+    <img src="meat.jpg" width="100%" height="300px">
+  <div class="textbannerpam">
+  <div class="fourmod"><button type="button" onclick="Explore-Shop" class="imgfour">-50%</button>
+  </div>
+  <h2>Order<br>Burger<br>with great<br>Meat</h2>
+</div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="container mt-4">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="gro1.jpg" class="d-block" alt="" width="1200px" height="600px">
+      </div>
+      <div class="carousel-item">
+        <img src="gro2.jpg" class="d-block" alt="" width="1200px" height="600px">
+      </div>
+      <div class="carousel-item">
+        <img src="gro3.jpg" class="d-block" alt="" width="1200px" height="600px">
+      </div>
+      <div class="carousel-item">
+        <img src="gro4.jpg" class="d-block" alt="" width="1200px" height="600px">
+      </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+</div>
+  <div class="container mt-4">
+  <div class="row">
+  <div class="col-md-12">
+  <div>
+  <h2>Sale Products</h2>
+  </div>
+  <div class="row">
+  <div class="col-md-4">
+  <div class="d-flex text-center align-items-center">
+  <img src="1b.jpg" width="130px" height="auto">
+  <div>
+  <h5 class="card-title"><a href="#" class="ul2li2">Mint</a></h5>
+  <h5 class="il"> $10.00</h5>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+  <div class="d-flex text-center align-items-center">
+  <img src="4b.jpg" width="130px" height="auto">
+  <div>
+  <h5 class="card-title"><a href="#" class="ul2li2">Basil</a></h5>
+  <h5 class="il">$60.00</h5>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+  <div class="d-flex text-center align-items-center">
+  <img src="2b.jpg" width="130px" height="auto">
+  <div>
+  <h5 class="card-title"><a href="#" class="ul2li2">Onions</a></h5>
+  <h5 class="il"> $90.00</h5>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+  <div class="d-flex text-center align-items-center mt-3">
+  <img src="3b.jpg" width="130px" height="auto">
+  <div>
+  <h5 class="card-title"><a href="#" class="ul2li2">Avacados</a></h5>
+  <h5 class="il"> $100.00</h5>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+   <div class="row">
+  <div class="col-md-12">
+  <div>
+  <h2>Recently Added</h2>
+  </div>
+  <div class="row">
+  <div class="col-md-4">
+  <div class="d-flex text-center align-items-center">
+  <img src="8b.jpg" width="130px" height="auto">
+  <div>
+  <h5 class="card-title"><a href="#" class="ul2li2">Mint</a></h5>
+  <h5 class="il"> $10.00</h5>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+  <div class="d-flex text-center align-items-center">
+  <img src="8b.jpg" width="130px" height="auto">
+  <div>
+  <h5 class="card-title"><a href="#" class="ul2li2">Mint</a></h5>
+  <h5 class="il"> $10.00</h5>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+  <div class="d-flex text-center align-items-center">
+  <img src="8b.jpg" width="130px" height="auto">
+  <div>
+  <h5 class="card-title"><a href="#" class="ul2li2">Mint</a></h5>
+  <h5 class="il"> $10.00</h5>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+  <div class="d-flex text-center align-items-center mt-3">
+  <img src="8b.jpg" width="130px" height="auto">
+  <div>
+  <h5 class="card-title"><a href="#" class="ul2li2">Mint</a></h5>
+  <h5 class="il"> $10.00</h5>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+   <div class="row">
+  <div class="col-md-12">
+  <div>
+  <h2>Top Rated</h2>
+  </div>
+  <div class="row">
+  <div class="col-md-4">
+  <div class="d-flex text-center align-items-center">
+  <img src="9b.jpg" width="130px" height="auto">
+  <div>
+  <h5 class="card-title"><a href="#" class="ul2li2">Mint</a></h5>
+  <h5 class="il"> $10.00</h5>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+  <div class="d-flex text-center align-items-center">
+  <img src="4b.jpg" width="130px" height="auto">
+  <div>
+  <h5 class="card-title"><a href="#" class="ul2li2">Basil</a></h5>
+  <h5 class="il">$60.00</h5>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+  <div class="d-flex text-center align-items-center">
+  <img src="6b.jpg" width="130px" height="auto">
+  <div>
+  <h5 class="card-title"><a href="#" class="ul2li2">Onions</a></h5>
+  <h5 class="il"> $90.00</h5>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+  <div class="d-flex text-center align-items-center mt-3">
+  <img src="3b.jpg" width="130px" height="auto">
+  <div>
+  <h5 class="card-title"><a href="#" class="ul2li2">Avacados</a></h5>
+  <h5 class="il"> $100.00</h5>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+   <div class="row">
+  <div class="col-md-12">
+  <div>
+  <h2>Top Selling</h2>
+  </div>
+  <div class="row">
+  <div class="col-md-4">
+  <div class="d-flex text-center align-items-center">
+  <img src="4b.jpg" width="130px" height="auto">
+  <div>
+  <h5 class="card-title"><a href="#" class="ul2li2">Mint</a></h5>
+  <h5 class="il"> $10.00</h5>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+  <div class="d-flex text-center align-items-center">
+  <img src="6b.jpg" width="130px" height="auto">
+  <div>
+  <h5 class="card-title"><a href="#" class="ul2li2">Basil</a></h5>
+  <h5 class="il">$60.00</h5>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+  <div class="d-flex text-center align-items-center">
+  <img src="7b.jpg" width="130px" height="auto">
+  <div>
+  <h5 class="card-title"><a href="#" class="ul2li2">Onions</a></h5>
+  <h5 class="il"> $90.00</h5>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+  <div class="d-flex text-center align-items-center mt-3">
+  <img src="8b.jpg" width="130px" height="auto">
+  <div>
+  <h5 class="card-title"><a href="#" class="ul2li2">Avacados</a></h5>
+  <h5 class="il"> $100.00</h5>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="container">
+  <div class="row">
+  <div class="hellocont2">
+  <div class="bannerss2">
+  <div class="d-flex justify-content-between">
+  <img src="man.webp" width="210px" height="100%">
+     <div class="adjust"><img src="part2.webp" width="550px" height="auto"></div>
+  <img src="women.webp" width="340px" height="100%" class="adjust2">
+  </div>
+  <div class="textbannerss2">
+  <h1>Order from our<br>Apps and Get Free<br>Delivery</h1>
+<div class="pb"><p>* Free Delivery For Orders Starts From $50</p></div>
+<div class="">
+<img src="play.webp" width="180px" height="100%">
+<img src="app.webp" width="180px" height="100%">
+</div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="container">
+  <div class="row bottom">
+  <div class="col-md-3">
+  <div class="d-flex spacer">
+  <img src="scoty.svg" class="space">
+  <h5>Free Delivery Across<br>the US!</h5>
+  </div>
+  <div class="alin">
+  <h6>Free delivery for all orders above $100</h6>
+  </div>
+  </div>
+  <div class="col-md-3">
+  <div class="d-flex spacer">
+  <img src="heart.svg" class="space">
+  <h5>100% Satisfaction<br>Guarantee!</h5>
+  </div>
+  <div class="alin">
+  <h6>Providing help in case of dissatisfaction</h6>
+  </div>
+  </div>
+  <div class="col-md-3">
+  <div class="d-flex spacer">
+  <img src="msg.svg" class="space">
+  <h5>Top-Notch Support<br>Avalible</h5>
+  </div>
+  <div class="alin">
+  <h6>Chat with us if you’ve any questions</h6>
+  </div>
+  </div>
+  <div class="col-md-3">
+  <div class="d-flex spacer">
+  <img src="card.svg" class="space">
+  <h5>Secure Payments To<Br>Do</h5>
+  </div>
+  <div class="alin">
+  <h6>We use safest payment technologies</h6>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <script src="script.js"></script>
+   <footer>
+ <div class="colo">
+  <div class="container">
+  <div class="row">
+ <div class="col-md-12 text-center picrow">
+  <img src="footer.webp"class="picfooter">
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-md-3">
+  <ul class="p-0">
+  <li class="footerli"><a href="#">About Us</a></li>
+  <li class="footerli"><a href="#">Contact Us</a></li>
+  <li class="footerli"><a href="#">Shipping Policy</a></li>
+  <li class="footerli"><a href="#">Refund Policy</a></li>
+  <li class="footerli"><a href="#">Privacy Policy</a></li>
+  <li class="footerli"><a href="#">Delivery Info</a></li>
+  <li class="footerli"><a href="#">Terms and Conditions</a></li>
+  </ul>
+  </div>
+  <div class="col-md-6">
+  <div class="text-center">
+  <div class="tct">We're Tasty Daily Shop, an innovative team of food engineers. 
+  Our unique model minimizes fresh food handling by up to 85%,
+  sourcing locally and dispatching within hours through cold chain
+  logistics in eco-friendly containers.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  Lorem.</div>
+<div class="d-flex fi">
+  <div><i class="fa-solid fa-magnifying-glass"></i></div>
+  <div><i class="fa-solid fa-user"></i></div>
+  <div><i class="fa-solid fa-heart"></i></div>
+  <div><i class="fa-solid fa-cart-shopping"></i></div>
+ </div>
+ </div>
+  </div>
+  <div class="col-md-3">
+  <h4 class="il">Get Latest News</h4>
+  <div class="txxt">Sign up to get 10% off your and stay up to
+  date on the latest product, special offers and news.</div>
+  <input type="text" placeholder="Your E-Mail" id="fname" name="fname" class="em" width="100%">
+  <h4 class="il mt-4">Payment Accept</h4>
+  <div>
+  <img src="1.webp" width="35px" height="auto">
+  <img src="2.webp" width="35px" height="auto">
+  <img src="3.webp" width="35px" height="auto">
+  <img src="4.webp" width="35px" height="auto">
+  <img src="6.webp" width="35px" height="auto">
+  <img src="7.webp" width="35px" height="auto">
+  </div>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-md-12">
+  <div class="text-center ip mt-5">© 2023 Tasty Daily Grocery WordPress Theme</div>
+  </div>
+  </div>
+  </div>
+  </div>
+ </footer> 
+  </body>
+  </html>
+ 
